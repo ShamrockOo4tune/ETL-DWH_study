@@ -1,0 +1,12 @@
+version: "3"
+services:
+  db:
+    image: "postgres:11"
+    container_name: "source_pg"
+    ports:
+      - "5433:5432"
+    volumes:
+      - /home/shamil/ETL-DWH_study/source_pg_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=root
